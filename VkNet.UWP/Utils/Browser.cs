@@ -1,18 +1,15 @@
 ﻿using JetBrains.Annotations;
+using System;
+using System.Net;
+using System.Text;
+using Newtonsoft.Json.Linq;
+using VkNet.Enums.Filters;
+using VkNet.Enums.SafetyEnums;
+using VkNet.Exception;
 using VkNet.UWP.Utils;
 
 namespace VkNet.Utils
 {
-    using System;
-    using System.Net;
-    using System.Text;
-
-    using Enums.Filters;
-    using Enums.SafetyEnums;
-    using Newtonsoft.Json.Linq;
-
-    using Exception;
-
     /// <summary>
     /// Браузер, через который производится сетевое взаимодействие с ВКонтакте.
     /// Сетевое взаимодействие выполняется с помощью <see cref="HttpWebRequest"/>.

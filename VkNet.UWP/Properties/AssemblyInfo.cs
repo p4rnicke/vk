@@ -4,11 +4,11 @@ using System.Reflection;
 // Общие сведения о сборке определяются следующим 
 // набором атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные с этой сборкой.
-[assembly: AssemblyTitle("VkNet.UWP")]
+[assembly: AssemblyTitle("VkNet")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("VkNet.UWP")]
+[assembly: AssemblyProduct("VkNet")]
 [assembly: AssemblyCopyright("©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

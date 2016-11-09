@@ -1,20 +1,21 @@
 ﻿using System.Threading;
 using VkNet.UWP.Utils;
+using System;
+using System.Runtime.CompilerServices;
+using JetBrains.Annotations;
+using System.Collections.Generic;
+using System.Text;
+using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
+using VkNet.Categories;
+using VkNet.Exception;
+using VkNet.Utils;
+using VkNet.Utils.AntiCaptcha;
+using VkNet.Enums.Filters;
 
 namespace VkNet
 {
-    using System;
-    using System.Runtime.CompilerServices;
-    using JetBrains.Annotations;
-    using System.Collections.Generic;
-    using System.Text;
-    using System.Threading.Tasks;
-    using Newtonsoft.Json.Linq;
-    using Categories;
-    using Exception;
-    using Utils;
-    using Utils.AntiCaptcha;
-    using Enums.Filters;
+    
 
     /// <summary>
     /// Служит для оповещения об истечении токена
@@ -651,7 +652,6 @@ namespace VkNet
 
 			return builder.ToString();
 		}
-		
 
 		/// <summary>
 		/// Прямой вызов API-метода
@@ -696,7 +696,6 @@ namespace VkNet
                 LastInvokeTime = DateTimeOffset.Now;
                 answer = Browser.GetJson(url.Replace("\'", "%27"));
             }
-
 
 #if DEBUG && !UNIT_TEST
             Debug.WriteLine(Utilities.PreetyPrintApiUrl(url));

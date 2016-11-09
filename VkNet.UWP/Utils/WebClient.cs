@@ -34,7 +34,7 @@ namespace VkNet.UWP.Utils
         {
             var content = new MultipartFormDataContent();
 
-            using (var stream = new MemoryStream(File.Read(fileName).Result))
+            using (var stream = new MemoryStream(File.Read(fileName)))
             {
                 var streamContent = new StreamContent(stream);
 

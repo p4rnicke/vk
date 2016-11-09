@@ -16,7 +16,7 @@
 		/// <summary>
 		/// API.
 		/// </summary>
-		readonly VkApi _vk;
+		private readonly VkApi _vk;
 
 		/// <summary>
 		/// Методы для работы с аккаунтом пользователя.
@@ -42,7 +42,7 @@
 		[ApiVersion("5.45")]
 		public Counters GetCounters(CountersFilter filter)
 		{
-			return _vk.Call("account.getCounters", new VkParameters { { "filter", filter } }, false);
+			return _vk.Call("account.getCounters", new VkParameters { { "filter", filter } });
 		}
 
 		/// <summary>
@@ -66,7 +66,7 @@
 				{ "name", name },
 				{ "user_id", userId}
 			};
-			return _vk.Call("account.setNameInMenu", parameters, false);
+			return _vk.Call("account.setNameInMenu", parameters);
 		}
 
 		/// <summary>
@@ -278,7 +278,7 @@
 			{
 				{ "user_id", userId}
 			};
-			return _vk.Call("account.getAppPermissions", parameters, false);
+			return _vk.Call("account.getAppPermissions", parameters);
 		}
 
 		/// <summary>
@@ -301,7 +301,7 @@
 				{ "offset", offset },
 				{ "count", count }
 			};
-			return _vk.Call("account.getActiveOffers", parameters, false);
+			return _vk.Call("account.getActiveOffers", parameters);
 		}
 
 		/// <summary>
