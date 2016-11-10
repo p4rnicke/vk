@@ -34,46 +34,6 @@
       "dependencies": {
         "NETStandard.Library": "1.6.0"
       }
-    },
-    "net40": {
-      "buildOptions": {
-        "platform": "anycpu"
-      },
-      "frameworkAssemblies": {
-        "System.Reflection.Extensions": { "version": "4.0.1" },
-        "System.Net.Requests": { "version": "4.0.11" },
-        "System.Threading.Timer": { "version": "4.0.1" },
-        "System.IO.Compression": { "version": "4.1.0" },
-        "System.Collections.Concurrent": { "version": "4.0.12" },
-        "System.Runtime.InteropServices": { "version": "4.1.0" },
-        "System.Globalization": { "version": "4.0.11" },
-        "System.Diagnostics.Debug": { "version": "4.0.11" },
-        "System.Resources.ResourceManager": { "version": "4.0.1" },
-        "System.Dynamic.Runtime": { "version": "4.0.11" },
-        "System.Linq": { "version": "4.1.0" },
-        "System.Collections": { "version": "4.0.11" },
-        "System.IO": { "version": "4.1.0" },
-        "System.Xml.ReaderWriter": { "version": "4.0.11" },
-        "System.Runtime.Numerics": { "version": "4.0.1" },
-        "System.Net.Primitives": { "version": "4.0.11" },
-        "System.Runtime.Serialization.Primitives": { "version": "4.1.1" },
-        "System.Threading.Tasks": { "version": "4.0.11" },
-        "System.Threading": { "version": "4.0.11" },
-        "System.ObjectModel": { "version": "4.0.12" },
-        "System.Linq.Expressions": { "version": "4.1.0" },
-        "System.Reflection": { "version": "4.1.0" },
-        "System.Text.RegularExpressions": { "version": "4.1.0" },
-        "System.Diagnostics.Tools": { "version": "4.0.1" },
-        "System.Reflection.Primitives": { "version": "4.0.1" },
-        "Microsoft.CSharp": { "version": "4.0.1" },
-        "System.Net.Http": { "version": "4.1.0" },
-        "System.Text.Encoding.Extensions": { "version": "4.0.11" },
-        "System.Diagnostics.Tracing": { "version": "4.1.0" },
-        "System.Text.Encoding": { "version": "4.0.11" },
-        "System.Runtime": { "version": "4.1.0" },
-        "System.Xml.XDocument": { "version": "4.0.11" },
-        "System.Runtime.Extensions": { "version": "4.1.0" }
-      }
     }
   }
 }
