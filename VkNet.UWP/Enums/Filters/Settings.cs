@@ -9,7 +9,7 @@
         /// <summary>
         /// Объединенные права доступа.
         /// </summary>
-        public ulong Value => Mask;
+        public new ulong Value => Mask;
 
         /// <summary>
         /// Пользователь разрешил отправлять ему уведомления.

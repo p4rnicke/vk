@@ -96,28 +96,26 @@ namespace VkNet.Model.Attachments
 
 		public static Wall FromJson(VkResponse response)
 		{
-			var wall = new Wall
-			{
-				Id = response["id"],
-				FromId = response["from_id"],
-				ToId = response["to_id"],
-				Date = response["date"],
-				PostType = response["post_type"],
-				Text = response["text"],
+            return new Wall
+            {
+                Id = response["id"],
+                FromId = response["from_id"],
+                ToId = response["to_id"],
+                Date = response["date"],
+                PostType = response["post_type"],
+                Text = response["text"],
 
-				Attachments = response["attachments"],
-				Comments = response["comments"],
-				Likes = response["likes"],
-				Reposts = response["reposts"],
-				PostSource = response["post_source"],
-				Geo = response["geo"],
-				SignerId = response["signer_id"],
-				CopyOwnerId = response["copy_owner_id "],
-				CopyPostId = response["copy_post_id"],
-				CopyText = response["copy_text"]
-			};
-
-			return wall;
-		}
+                Attachments = response["attachments"],
+                Comments = response["comments"],
+                Likes = response["likes"],
+                Reposts = response["reposts"],
+                PostSource = response["post_source"],
+                Geo = response["geo"],
+                SignerId = response["signer_id"],
+                CopyOwnerId = response["copy_owner_id "],
+                CopyPostId = response["copy_post_id"],
+                CopyText = response["copy_text"]
+            };
+        }
 	}
 }

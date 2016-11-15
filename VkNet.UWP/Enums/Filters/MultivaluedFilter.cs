@@ -27,7 +27,7 @@ namespace VkNet.Enums.Filters
 		/// </summary>
 		/// <param name="response">Ответ сервера.</param>
 		/// <returns>Объект перечисления типа <typeparam name="TFilter">Непосредственно наследник</typeparam></returns>
-		public static TFilter FromJson(VkResponse response)
+		public new static TFilter FromJson(VkResponse response)
 		{
 			var value = response.ToString();
 			return FromJson(value);
@@ -38,7 +38,7 @@ namespace VkNet.Enums.Filters
 		/// </summary>
 		/// <param name="response">Ответ сервера.</param>
 		/// <returns>Объект перечисления типа <typeparam name="TFilter">Непосредственно наследник</typeparam></returns>
-		public static TFilter FromJson(string response)
+		public new static TFilter FromJson(string response)
 		{
 			var result = new TFilter();
 			var items = response.Split(new []{ ',' }, StringSplitOptions.RemoveEmptyEntries);

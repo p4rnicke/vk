@@ -26,7 +26,7 @@ namespace VkNet
 	/// API для работы с ВКонтакте. Выступает в качестве фабрики для различных категорий API (например, для работы с пользователями,
 	/// группами и т.п.).
 	/// </summary>
-	public class VkApi
+	public class VkApi : IDisposable
 	{
 		/// <summary>
 		/// Версия API vk.com.
@@ -418,9 +418,9 @@ namespace VkNet
 		/// <param name="code">Делегат двух факторной авторизации. Если не указан - будет взят из параметров (если есть)</param>
 		public Task RefreshTokenAsync(Func<string> code = null)
 		{
-			var rTask = new Task(() => RefreshToken(code));
-			rTask.Start();
-			return rTask;
+			var result = new Task(() => RefreshToken(code));
+			result.Start();
+			return result;
 		}
 
         #region Private & public Methods
@@ -725,5 +725,14 @@ namespace VkNet
 			result.Start();
 			return result;
 		}
+
+	    #region Implementation of IDisposable
+
+	    public void Dispose()
+	    {
+	        _expireTimer.Dispose();
+	    }
+
+	    #endregion
 	}
 }

@@ -18,7 +18,7 @@ namespace VkNet.Model.Attachments
 		/// <summary>
 		/// Идентификатор приложенного объекта.
 		/// </summary>
-		public long? Id { get; set; }
+		public long Id { get; set; }
 
 		/// <summary>
 		/// Идентификатор владельца приложенного объекта.
@@ -30,7 +30,7 @@ namespace VkNet.Model.Attachments
 		/// </summary>
 		public override string ToString()
 		{
-			return string.Format("{0}{1}_{2}", MatchType(GetType()), OwnerId, Id);
+			return $"{MatchType(GetType())}{OwnerId}_{Id}";
 		}
 
 		/// <summary>

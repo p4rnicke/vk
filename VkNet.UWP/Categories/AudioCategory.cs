@@ -86,7 +86,7 @@
 		{
 			if (!audios.Any())
 			{
-				throw new ArgumentNullException("audios");
+				throw new ArgumentNullException(nameof(audios));
 			}
 
 			var parameters = new VkParameters { { "audios", audios } };

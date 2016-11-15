@@ -83,7 +83,7 @@
 		/// </summary>
 		/// <param name="response">Ответ сервера.</param>
 		/// <returns></returns>
-		public static Privacy FromJson(VkResponse response)
+		public new static Privacy FromJson(VkResponse response)
 		{
 			switch (response.ToString())
 			{
