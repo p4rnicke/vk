@@ -72,7 +72,7 @@ namespace VkNet.Model.RequestParams
 		{
 			var parameters = new VkParameters
 			{
-				{ "q", WebUtility.UrlEncode(p.Query) },
+				{ "q", WebUtilityHelper.UrlEncode(p.Query) },
 				{ "lat", p.Latitude },
 				{ "long", p.Longitude },
 				{ "start_time", p.StartTime },

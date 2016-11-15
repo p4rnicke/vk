@@ -77,7 +77,7 @@ namespace VkNet.Model.RequestParams
 			{
 				{ "owner_id", p.OwnerId },
 				{ "photo_id", p.PhotoId },
-				{ "caption", WebUtility.UrlEncode(p.Caption) },
+				{ "caption", WebUtilityHelper.UrlEncode(p.Caption) },
 				{ "latitude", p.Latitude },
 				{ "longitude", p.Longitude },
 				{ "place_str", p.PlaceStr },

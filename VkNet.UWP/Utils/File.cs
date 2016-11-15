@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
 
-namespace VkNet.UWP.Utils
+namespace VkNet.Utils
 {
     /// <summary>
     /// Работа с файлами
@@ -15,7 +15,7 @@ namespace VkNet.UWP.Utils
         /// <param name="data">Массив байт</param>
         public static void Create(string filePath, byte[] data)
         {
-            throw new System.Exception("Не реализовано для UWP");
+            throw new System.Exception("Не реализовано для UWP"); // todo Не реализовано для UWP
         }
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace VkNet.UWP.Utils
         /// <returns>Массив байт</returns>
         public static byte[] Read(string filePath)
         {
-            throw new System.Exception("Не реализовано для UWP");
+            throw new System.Exception("Не реализовано для UWP"); // todo Не реализовано для UWP
         }
     }
 }

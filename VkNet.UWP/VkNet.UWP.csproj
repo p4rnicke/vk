@@ -30,10 +30,12 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>TRACE;UWP</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\VkNet.xml</DocumentationFile>
+    <CodeAnalysisRuleSet>VkNet.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '.NET4.0|AnyCPU'">
     <OutputPath>bin\.NET4.0\</OutputPath>
@@ -46,10 +48,6 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
-  <ItemGroup>
-    <!-- A reference to the entire .NET Framework is automatically included -->
-    <None Include="project.json" />
-  </ItemGroup>
   <ItemGroup>
     <Compile Include="Categories\AccountCategory.cs" />
     <Compile Include="Categories\AppsCategory.cs" />
@@ -413,6 +411,7 @@
       <DependentUpon>ModelToVkParametrsCastGenerator.tt</DependentUpon>
     </Compile>
     <Compile Include="Utils\Tuple.cs" />
+    <Compile Include="Utils\TypeHelper.cs" />
     <Compile Include="Utils\Utilities.cs" />
     <Compile Include="Utils\VkAuthorization.cs" />
     <Compile Include="Utils\VkCollection.cs" />
@@ -441,6 +440,7 @@
     <Compile Include="Utils\WebClient.cs" />
     <Compile Include="Utils\WebForm.cs" />
     <Compile Include="Utils\WebProxy.cs" />
+    <Compile Include="Utils\WebUtilityHelper.cs" />
     <Compile Include="VkApi.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -468,6 +468,19 @@
     <Reference Include="System">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETPortable\v4.5\Profile\Profile259\System.dll</HintPath>
     </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETPortable\v4.5\Profile\Profile259\System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETPortable\v4.5\Profile\Profile259\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETPortable\v4.5\Profile\Profile111\System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VkNet.ruleset" />
+    <None Include="VkNet.UWP.project.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

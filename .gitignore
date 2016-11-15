@@ -20,6 +20,7 @@ _ReSharper.*
 *.resharper.user
 
 /GCopLog.txt
-VkNet/Utils/*Generator*.cs
+**/Utils/*Generator*.cs
 **/*.lock.json
-/VkNet.UWP/VkNet.UWP.nuget.targets
+**/*.nuget.targets
+

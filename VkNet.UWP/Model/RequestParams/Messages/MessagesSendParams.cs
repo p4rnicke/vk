@@ -106,7 +106,7 @@ namespace VkNet.Model.RequestParams
 				{ "domain", p.Domain },
 				{ "chat_id", p.ChatId },
 				{ "user_ids", p.UserIds },
-				{ "message", WebUtility.UrlEncode(p.Message) },
+				{ "message", WebUtilityHelper.UrlEncode(p.Message) },
 				{ "random_id", p.RandomId },
 				{ "lat", p.Lat },
 				{ "long", p.Longitude },

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 
-namespace VkNet.UWP.Utils
+namespace VkNet.Utils
 {
     /// <summary>
     /// Реализация WebProxy

@@ -1,11 +1,13 @@
-﻿using System;
+﻿#if UWP
+using System;
 using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using JetBrains.Annotations;
 
-namespace VkNet.UWP.Utils
+namespace VkNet.Utils
 {
+
     /// <summary>
     /// Подмена WebClient
     /// </summary>
@@ -65,7 +67,7 @@ namespace VkNet.UWP.Utils
             }
         }
 
-        #region Implementation of IDisposable
+#region Implementation of IDisposable
         /// <summary>
         /// Освобождение ресурсов.
         /// </summary>
@@ -74,6 +76,7 @@ namespace VkNet.UWP.Utils
             _client.Dispose();
         }
 
-        #endregion
+#endregion
     }
 }
+#endif

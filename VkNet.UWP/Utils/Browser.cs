@@ -6,7 +6,7 @@ using Newtonsoft.Json.Linq;
 using VkNet.Enums.Filters;
 using VkNet.Enums.SafetyEnums;
 using VkNet.Exception;
-using VkNet.UWP.Utils;
+using VkNet.Utils;
 
 namespace VkNet.Utils
 {

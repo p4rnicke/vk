@@ -1,10 +1,8 @@
 ﻿using System.Threading;
-using VkNet.UWP.Utils;
 using System;
 using System.Runtime.CompilerServices;
 using JetBrains.Annotations;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
@@ -685,7 +683,13 @@ namespace VkNet
                     var span = LastInvokeTimeSpan?.TotalMilliseconds;
                     if (span < _minInterval)
                     {
-                        Task.Delay((int) _minInterval - (int) span).Wait();
+                        var timeout = (int) _minInterval - (int) span;
+#if UWP
+                        Task.Delay(timeout).Wait();
+#else
+                        Thread.Sleep(timeout);
+#endif
+
                     }
                     url = GetApiUrl(methodName, parameters, skipAuthorization);
                     LastInvokeTime = DateTimeOffset.Now;

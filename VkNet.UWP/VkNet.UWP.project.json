@@ -27,8 +27,7 @@
     "netstandard1.2": {
       "buildOptions": {
         "define": [
-          "NETSTANDARD1_2",
-          "PORTABLE"
+          "NETSTANDARD1_2"
         ]
       },
       "dependencies": {
