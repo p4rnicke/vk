@@ -3,6 +3,7 @@ using System;
 using System.Runtime.CompilerServices;
 using JetBrains.Annotations;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
@@ -703,9 +704,15 @@ namespace VkNet
             }
 
 #if DEBUG && !UNIT_TEST
+#if UWP
             Debug.WriteLine(Utilities.PreetyPrintApiUrl(url));
 
             Debug.WriteLine(Utilities.PreetyPrintJson(answer));
+#else
+            Trace.WriteLine(Utilities.PreetyPrintApiUrl(url));
+
+            Trace.WriteLine(Utilities.PreetyPrintJson(answer));
+#endif
 #endif
             VkErrors.IfErrorThrowException(answer);
 
