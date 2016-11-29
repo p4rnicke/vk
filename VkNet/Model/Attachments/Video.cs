@@ -59,6 +59,11 @@ namespace VkNet.Model.Attachments
         public Uri Photo640 { get; set; }
 
         /// <summary>
+        /// Url изображения-обложки ролика с размером 800x600px (если размер есть).
+        /// </summary>
+        public Uri Photo800 { get; set; }
+
+        /// <summary>
         /// Дата добавления видеозаписи.
         /// </summary>
         public DateTime? Date { get; set; }
@@ -152,7 +157,8 @@ namespace VkNet.Model.Attachments
 		        Photo130 = video["photo_130"],
 		        Photo320 = video["photo_320"],
 		        Photo640 = video["photo_640"],
-		        Date = video["date"],
+                Photo800 = video["photo_800"],
+                Date = video["date"],
 		        ViewsCount = video["views"],
 		        CommentsCount = video["comments"],
 		        Player = video["player"],
